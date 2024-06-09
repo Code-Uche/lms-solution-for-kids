@@ -1,0 +1,497 @@
+<application xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:service="https://unitedstates-002.azure-apim.net/apim/basecamp" xmlns:siena="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11" siena:serviceId="Basecamp3" xmlns="http://wadl.dev.java.net/2009/02">
+  <doc title="Basecamp 3">Basecamp 3 is a tool that helps teams work together. It provides a dashboard to manage all messaging, document collaboration, scheduling and task management together in one place.</doc>
+  <grammars>
+    <jsonTypes targetNamespace="https://unitedstates-002.azure-apim.net/apim/basecamp" xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
+      <array typeRef="Account" name="AccountList_accounts_def" />
+      <object name="AccountList">
+        <property name="accounts" typeRef="AccountList_accounts_def" />
+      </object>
+      <integer name="Account_id_def" />
+      <string name="Account_name_def" />
+      <string name="Account_product_def" />
+      <string name="Account_href_def" />
+      <object name="Account">
+        <property name="id" type="integer" />
+        <property name="name" type="string" />
+        <property name="product" type="string" />
+        <property name="href" type="string" />
+      </object>
+      <array typeRef="Basecamp" name="BasecampList" />
+      <integer name="Basecamp_id_def" />
+      <string name="Basecamp_status_def" />
+      <string name="Basecamp_name_def" />
+      <string name="Basecamp_bookmark_url_def" />
+      <string name="Basecamp_app_url_def" />
+      <boolean name="Basecamp_bookmarked_def" />
+      <object name="Basecamp_dock_def">
+        <property name="chat" typeRef="DockItem" />
+        <property name="message_board" typeRef="DockItem" />
+        <property name="todoset" typeRef="DockItem" />
+        <property name="schedule" typeRef="DockItem" />
+        <property name="questionnaire" typeRef="DockItem" />
+        <property name="vault" typeRef="DockItem" />
+      </object>
+      <object name="Basecamp">
+        <property name="id" type="integer" />
+        <property name="status" type="string" />
+        <property name="name" type="string" />
+        <property name="bookmark_url" type="string" />
+        <property name="app_url" type="string" />
+        <property name="bookmarked" type="boolean" />
+        <property name="dock" typeRef="Basecamp_dock_def" />
+      </object>
+      <integer name="DockItem_id_def" />
+      <string name="DockItem_title_def" />
+      <string name="DockItem_name_def" />
+      <boolean name="DockItem_enabled_def" />
+      <number name="DockItem_position_def" />
+      <string name="DockItem_app_url_def" />
+      <object name="DockItem">
+        <property name="id" type="integer" />
+        <property name="title" type="string" />
+        <property name="name" type="string" />
+        <property name="enabled" type="boolean" />
+        <property name="position" type="number" />
+        <property name="app_url" type="string" />
+      </object>
+      <integer name="ToDoList_id_def" />
+      <string name="ToDoList_name_def" />
+      <string name="ToDoList_description_def" />
+      <boolean name="ToDoList_completed_def" />
+      <object name="ToDoList">
+        <property name="id" type="integer" />
+        <property name="name" type="string" />
+        <property name="description" type="string" />
+        <property name="completed" type="boolean" />
+      </object>
+      <integer name="ToDo_id_def" />
+      <string name="ToDo_content_def" />
+      <string name="ToDo_description_def" />
+      <dateTimeString name="ToDo_due_on_def" />
+      <dateTimeString name="ToDo_start_on_def" />
+      <object name="ToDo">
+        <property name="id" type="integer" />
+        <property name="content" type="string" />
+        <property name="description" type="string" />
+        <property name="due_on" typeRef="ToDo_due_on_def" />
+        <property name="start_on" typeRef="ToDo_start_on_def" />
+      </object>
+      <string name="NewToDo_content_def" />
+      <string name="NewToDo_description_def" />
+      <dateTimeString name="NewToDo_due_on_def" />
+      <dateTimeString name="NewToDo_start_on_def" />
+      <object name="NewToDo">
+        <property name="content" type="string" />
+        <property name="description" type="string" />
+        <property name="due_on" typeRef="NewToDo_due_on_def" />
+        <property name="start_on" typeRef="NewToDo_start_on_def" />
+      </object>
+      <string name="NewMessage_subject_def" />
+      <string name="NewMessage_content_def" />
+      <object name="NewMessage">
+        <property name="subject" type="string" />
+        <property name="content" type="string" />
+      </object>
+      <string name="Message_subject_def" />
+      <string name="Message_content_def" />
+      <string name="Message_url_def" />
+      <integer name="Message_id_def" />
+      <dateTimeString name="Message_created_at_def" />
+      <dateTimeString name="Message_updated_at_def" />
+      <object name="Message">
+        <property name="subject" type="string" />
+        <property name="content" type="string" />
+        <property name="url" type="string" />
+        <property name="id" type="integer" />
+        <property name="created_at" typeRef="Message_created_at_def" />
+        <property name="updated_at" typeRef="Message_updated_at_def" />
+      </object>
+      <string name="NewDocument_title_def" />
+      <string name="NewDocument_content_def" />
+      <object name="NewDocument">
+        <property name="title" type="string" />
+        <property name="content" type="string" />
+      </object>
+      <string name="Document_title_def" />
+      <string name="Document_content_def" />
+      <string name="Document_app_url_def" />
+      <integer name="Document_id_def" />
+      <dateTimeString name="Document_created_at_def" />
+      <dateTimeString name="Document_updated_at_def" />
+      <integer name="Document_vault_id_def" />
+      <string name="Document_vault_title_def" />
+      <string name="Document_vault_url_def" />
+      <object name="Document">
+        <property name="title" type="string" />
+        <property name="content" type="string" />
+        <property name="app_url" type="string" />
+        <property name="id" type="integer" />
+        <property name="created_at" typeRef="Document_created_at_def" />
+        <property name="updated_at" typeRef="Document_updated_at_def" />
+        <property name="vault_id" type="integer" />
+        <property name="vault_title" type="string" />
+        <property name="vault_url" type="string" />
+      </object>
+      <string name="Upload_filename_def" />
+      <string name="Upload_description_def" />
+      <string name="Upload_app_url_def" />
+      <integer name="Upload_id_def" />
+      <dateTimeString name="Upload_created_at_def" />
+      <dateTimeString name="Upload_updated_at_def" />
+      <string name="Upload_content_type_def" />
+      <integer name="Upload_byte_size_def" />
+      <object name="Upload">
+        <property name="filename" type="string" />
+        <property name="description" type="string" />
+        <property name="app_url" type="string" />
+        <property name="id" type="integer" />
+        <property name="created_at" typeRef="Upload_created_at_def" />
+        <property name="updated_at" typeRef="Upload_updated_at_def" />
+        <property name="content_type" type="string" />
+        <property name="byte_size" type="integer" />
+      </object>
+      <array typeRef="Message" name="MessageArray" />
+      <array typeRef="ToDo" name="ToDoArray" />
+      <array typeRef="Document" name="DocumentArray" />
+      <array typeRef="Upload" name="UploadArray" />
+      <array typeRef="Entry" name="EntryArray" />
+      <string name="BlobMetaData_Id_def" />
+      <string name="BlobMetaData_Name_def" />
+      <string name="BlobMetaData_DisplayName_def" />
+      <string name="BlobMetaData_Path_def" />
+      <dateTimeString name="BlobMetaData_LastModified_def" />
+      <integer name="BlobMetaData_Size_def" />
+      <string name="BlobMetaData_MediaType_def" />
+      <boolean name="BlobMetaData_IsFolder_def" />
+      <string name="BlobMetaData_ETag_def" />
+      <string name="BlobMetaData_FileLocator_def" />
+      <object name="BlobMetaData">
+        <property name="Id" type="string" />
+        <property name="Name" type="string" />
+        <property name="DisplayName" type="string" />
+        <property name="Path" type="string" />
+        <property name="LastModified" typeRef="BlobMetaData_LastModified_def" />
+        <property name="Size" type="integer" />
+        <property name="MediaType" type="string" />
+        <property name="IsFolder" type="boolean" />
+        <property name="ETag" type="string" />
+        <property name="FileLocator" type="string" />
+      </object>
+      <string name="NewEntry_summary_def" />
+      <dateTimeString name="NewEntry_starts_at_def" />
+      <dateTimeString name="NewEntry_ends_at_def" />
+      <string name="NewEntry_participant_ids_def" />
+      <object name="NewEntry">
+        <property name="summary" type="string" />
+        <property name="starts_at" typeRef="NewEntry_starts_at_def" />
+        <property name="ends_at" typeRef="NewEntry_ends_at_def" />
+        <property name="participant_ids" type="string" />
+      </object>
+      <string name="Entry_summary_def" />
+      <dateTimeString name="Entry_starts_at_def" />
+      <dateTimeString name="Entry_ends_at_def" />
+      <string name="Entry_app_url_def" />
+      <integer name="Entry_id_def" />
+      <dateTimeString name="Entry_created_at_def" />
+      <dateTimeString name="Entry_updated_at_def" />
+      <object name="Entry">
+        <property name="summary" type="string" />
+        <property name="starts_at" typeRef="Entry_starts_at_def" />
+        <property name="ends_at" typeRef="Entry_ends_at_def" />
+        <property name="app_url" type="string" />
+        <property name="id" type="integer" />
+        <property name="created_at" typeRef="Entry_created_at_def" />
+        <property name="updated_at" typeRef="Entry_updated_at_def" />
+      </object>
+      <array typeRef="ToDoList" name="ListToDoLists_responses_200_def" />
+      <array typeRef="ToDo" name="ListToDos_responses_200_def" />
+      <string name="UploadFile_param_body_def" />
+    </jsonTypes>
+  </grammars>
+  <resources siena:authenticationProviderHref="#PowerAppAuth" base="https://unitedstates-002.azure-apim.net/apim/basecamp">
+    <resource path="/{connectionId}/authorization.json">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <method siena:requiresAuthentication="true" name="GET" id="ListAccounts" actionName="ListAccounts" visibility="advanced" siena:isDeprecated="false">
+        <doc title="List Accounts&#xA;List Accounts you're a part of" />
+        <request />
+        <response>
+          <representation mediaType="application/json" element="service:AccountList" />
+        </response>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/{account_id}/projects.json">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <param style="template" name="account_id" type="xs:long" required="true">
+        <doc title="Unique identifier of the account." />
+      </param>
+      <method siena:requiresAuthentication="true" name="GET" id="ListBasecamps" actionName="ListBasecamps" visibility="advanced" siena:isDeprecated="false">
+        <doc title="List Basecamps&#xA;List Basecamps you're a part of" />
+        <request />
+        <response>
+          <representation mediaType="application/json" element="service:BasecampList" />
+        </response>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/{account_id}/projects/recordings.Todolist">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <param style="template" name="account_id" type="xs:long" required="true">
+        <doc title="Unique identifier of the account." />
+      </param>
+      <method siena:requiresAuthentication="true" name="GET" id="ListToDoLists" actionName="ListToDoLists" visibility="advanced" siena:isDeprecated="false">
+        <doc title="List to-do lists&#xA;List the to-do lists in the basecamp" />
+        <request>
+          <param style="query" name="bucket" type="xs:string">
+            <doc title="Basecamp to filter on" />
+          </param>
+        </request>
+        <response>
+          <representation mediaType="application/json" element="service:ListToDoLists_responses_200_def" />
+        </response>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/{account_id}/buckets/{basecampId}/todolists/{todolistId}/todos.json">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <param style="template" name="account_id" type="xs:long" required="true">
+        <doc title="Unique identifier of the account." />
+      </param>
+      <param style="template" name="basecampId" type="xs:string" required="true">
+        <doc title="Unique identifier of the basecamp." />
+      </param>
+      <param style="template" name="todolistId" type="xs:string" required="true">
+        <doc title="Unique identifier of the to-do list." />
+      </param>
+      <method siena:requiresAuthentication="true" name="POST" id="CreateToDo" actionName="CreateToDo" visibility="advanced" siena:isDeprecated="false">
+        <doc title="Create a to-do&#xA;Add a to-do to a to-do list" />
+        <request>
+          <representation mediaType="application/json">
+            <param style="plain" name="content" path="/content" type="xs:string" required="true" />
+            <param style="plain" name="description" path="/description" type="xs:string" />
+            <param style="plain" name="due_on" path="/due_on" type="service:NewToDo_due_on_def" />
+            <param style="plain" name="start_on" path="/start_on" type="service:NewToDo_start_on_def" />
+          </representation>
+        </request>
+        <response>
+          <representation mediaType="application/json" element="service:ToDo" />
+        </response>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/{account_id}/buckets/{basecampId}/todolists/{todolistId}/todos.json">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <param style="template" name="account_id" type="xs:long" required="true">
+        <doc title="Unique identifier of the account." />
+      </param>
+      <param style="template" name="basecampId" type="xs:string" required="true">
+        <doc title="Unique identifier of the basecamp." />
+      </param>
+      <param style="template" name="todolistId" type="xs:string" required="true">
+        <doc title="Unique identifier of the to-do list." />
+      </param>
+      <method siena:requiresAuthentication="true" name="GET" id="ListToDos" actionName="ListToDos" visibility="advanced" siena:isDeprecated="false">
+        <doc title="List to-dos&#xA;List the to-dos in a to-do list" />
+        <request />
+        <response>
+          <representation mediaType="application/json" element="service:ListToDos_responses_200_def" />
+        </response>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/{account_id}/buckets/{basecampId}/todos/{todoId}/completion.json">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <param style="template" name="account_id" type="xs:long" required="true">
+        <doc title="Unique identifier of the account." />
+      </param>
+      <param style="template" name="basecampId" type="xs:string" required="true">
+        <doc title="Unique identifier of the basecamp." />
+      </param>
+      <param style="template" name="todoId" type="xs:string" required="true">
+        <doc title="Get a To-do Id from a previous step" />
+      </param>
+      <method siena:requiresAuthentication="true" name="POST" id="CompleteToDo" actionName="CompleteToDo" visibility="advanced" siena:isDeprecated="false">
+        <doc title="Complete a to-do&#xA;Mark a to-do as completed" />
+        <request />
+      </method>
+    </resource>
+    <resource path="/{connectionId}/{account_id}/buckets/{basecampId}/todos/{todoId}/completion.json">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <param style="template" name="account_id" type="xs:long" required="true">
+        <doc title="Unique identifier of the account." />
+      </param>
+      <param style="template" name="basecampId" type="xs:string" required="true">
+        <doc title="Unique identifier of the basecamp." />
+      </param>
+      <param style="template" name="todoId" type="xs:string" required="true">
+        <doc title="Get a To-do Id from a previous step" />
+      </param>
+      <method siena:requiresAuthentication="true" name="DELETE" id="UncompleteToDo" actionName="UncompleteToDo" visibility="advanced" siena:isDeprecated="false">
+        <doc title="Uncomplete a to-do&#xA;Mark a to-do as not completed" />
+        <request />
+      </method>
+    </resource>
+    <resource path="/{connectionId}/{account_id}/buckets/{basecampId}/recordings/{objectId}/status/trashed.json">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <param style="template" name="account_id" type="xs:long" required="true">
+        <doc title="Unique identifier of the account." />
+      </param>
+      <param style="template" name="basecampId" type="xs:string" required="true">
+        <doc title="Unique identifier of the basecamp." />
+      </param>
+      <param style="template" name="objectId" type="xs:string" required="true">
+        <doc title="Unique identifier of the object." />
+      </param>
+      <method siena:requiresAuthentication="true" name="PUT" id="DeleteObject" actionName="DeleteObject" visibility="advanced" siena:isDeprecated="true">
+        <doc title="Delete an object&#xA;Put an object in the trash" />
+        <request />
+      </method>
+    </resource>
+    <resource path="/{connectionId}/{account_id}/buckets/{basecampId}/recordings/todos/{todoId}/status/trashed.json">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <param style="template" name="account_id" type="xs:long" required="true">
+        <doc title="Unique identifier of the account." />
+      </param>
+      <param style="template" name="basecampId" type="xs:string" required="true">
+        <doc title="Unique identifier of the basecamp." />
+      </param>
+      <param style="template" name="todoId" type="xs:string" required="true">
+        <doc title="Get a To-do Id from a previous step" />
+      </param>
+      <method siena:requiresAuthentication="true" name="PUT" id="DeleteToDo" actionName="DeleteToDo" visibility="advanced" siena:isDeprecated="false">
+        <doc title="Delete a to-do&#xA;Put a to-do in the trash" />
+        <request />
+      </method>
+    </resource>
+    <resource path="/{connectionId}/{account_id}/buckets/{basecampId}/recordings/events/{eventId}/status/trashed.json">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <param style="template" name="account_id" type="xs:long" required="true">
+        <doc title="Unique identifier of the account." />
+      </param>
+      <param style="template" name="basecampId" type="xs:string" required="true">
+        <doc title="Unique identifier of the basecamp." />
+      </param>
+      <param style="template" name="eventId" type="xs:string" required="true">
+        <doc title="Get a scheduled entry Id from a previous step" />
+      </param>
+      <method siena:requiresAuthentication="true" name="PUT" id="DeleteScheduledEntry" actionName="DeleteScheduledEntry" visibility="advanced" siena:isDeprecated="false">
+        <doc title="Delete a scheduled entry&#xA;Put a scheduled entry in the trash" />
+        <request />
+      </method>
+    </resource>
+    <resource path="/{connectionId}/{account_id}/buckets/{basecampId}/recordings/documents/{documentId}/status/trashed.json">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <param style="template" name="account_id" type="xs:long" required="true">
+        <doc title="Unique identifier of the account." />
+      </param>
+      <param style="template" name="basecampId" type="xs:string" required="true">
+        <doc title="Unique identifier of the basecamp." />
+      </param>
+      <param style="template" name="documentId" type="xs:string" required="true">
+        <doc title="Get a document Id from a previous step" />
+      </param>
+      <method siena:requiresAuthentication="true" name="PUT" id="DeleteDocument" actionName="DeleteDocument" visibility="advanced" siena:isDeprecated="false">
+        <doc title="Delete a document&#xA;Put a document in the trash" />
+        <request />
+      </method>
+    </resource>
+    <resource path="/{connectionId}/{account_id}/buckets/dynamic_message_board/messages.json">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <param style="template" name="account_id" type="xs:long" required="true">
+        <doc title="Unique identifier of the account." />
+      </param>
+      <method siena:requiresAuthentication="true" name="POST" id="PostMessage" actionName="PostMessage" visibility="advanced" siena:isDeprecated="false">
+        <doc title="Post a message&#xA;Add a message to a basecamp" />
+        <request>
+          <param style="query" name="basecampId" type="xs:string" required="true">
+            <doc title="Unique identifier of the basecamp." />
+          </param>
+          <representation mediaType="application/json">
+            <param style="plain" name="subject" path="/subject" type="xs:string" required="true" />
+            <param style="plain" name="content" path="/content" type="xs:string" required="true" />
+          </representation>
+        </request>
+        <response>
+          <representation mediaType="application/json" element="service:Message" />
+        </response>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/{account_id}/buckets/{basecampId}/vaults/{vaultId}/documents.json">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <param style="template" name="account_id" type="xs:long" required="true">
+        <doc title="Unique identifier of the account." />
+      </param>
+      <param style="template" name="basecampId" type="xs:string" required="true">
+        <doc title="Unique identifier of the basecamp." />
+      </param>
+      <param style="template" name="vaultId" type="xs:string" required="true">
+        <doc title="Select a folder or enter a vault Id" />
+      </param>
+      <method siena:requiresAuthentication="true" name="POST" id="CreateDocument" actionName="CreateDocument" visibility="important" siena:isDeprecated="false">
+        <doc title="Create a document&#xA;Add a document" />
+        <request>
+          <representation mediaType="application/json">
+            <param style="plain" name="title" path="/title" type="xs:string" required="true" />
+            <param style="plain" name="content" path="/content" type="xs:string" required="true" />
+          </representation>
+        </request>
+        <response>
+          <representation mediaType="application/json" element="service:Document" />
+        </response>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/{account_id}/buckets/{basecampId}/vaults/{vaultId}/uploads.json">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <param style="template" name="account_id" type="xs:long" required="true">
+        <doc title="Unique identifier of the account." />
+      </param>
+      <param style="template" name="basecampId" type="xs:string" required="true">
+        <doc title="Unique identifier of the basecamp." />
+      </param>
+      <param style="template" name="vaultId" type="xs:string" required="true">
+        <doc title="Select a folder or enter a vault Id" />
+      </param>
+      <method siena:requiresAuthentication="true" name="POST" id="UploadFile" actionName="UploadFile" visibility="advanced" siena:isDeprecated="false">
+        <doc title="Upload file&#xA;Upload a file" />
+        <request>
+          <param style="query" name="content_type" type="xs:string" required="true">
+            <doc title="The content type of the file" />
+          </param>
+          <param style="query" name="name" type="xs:string" required="true">
+            <doc title="Name of the file being uploaded" />
+          </param>
+          <representation mediaType="application/octet-stream" />
+        </request>
+        <response>
+          <representation mediaType="application/json" element="service:BasecampList" />
+        </response>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/{account_id}/buckets/dynamic_schedule/entries.json">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <param style="template" name="account_id" type="xs:long" required="true">
+        <doc title="Unique identifier of the account." />
+      </param>
+      <method siena:requiresAuthentication="true" name="POST" id="CreateScheduleEntry" actionName="CreateScheduleEntry" visibility="advanced" siena:isDeprecated="false">
+        <doc title="Create a schedule entry&#xA;Create a schedule entry" />
+        <request>
+          <param style="query" name="basecampId" type="xs:string" required="true">
+            <doc title="Unique identifier of the basecamp." />
+          </param>
+          <representation mediaType="application/json">
+            <param style="plain" name="summary" path="/summary" type="xs:string" required="true" />
+            <param style="plain" name="starts_at" path="/starts_at" type="service:NewEntry_starts_at_def" required="true" />
+            <param style="plain" name="ends_at" path="/ends_at" type="service:NewEntry_ends_at_def" required="true" />
+            <param style="plain" name="participant_ids" path="/participant_ids" type="xs:string" />
+          </representation>
+        </request>
+        <response>
+          <representation mediaType="application/json" element="service:Entry" />
+        </response>
+      </method>
+    </resource>
+  </resources>
+  <authenticationProviders xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
+    <connectionProvider id="PowerAppAuth" siena:connectionProviderId="shared_basecamp" />
+  </authenticationProviders>
+  <template xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
+    <variable name="connectionId">
+      <modifyParams style="template" name="connectionId" attribute="fixed" />
+    </variable>
+  </template>
+</application>

@@ -1,0 +1,95 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "crb87_juniorsecschools",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "crb87_juniorsecschool",
+    "Name": "Junior Sec Schools",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "crb87_allsubjects": "All Subjects",
+      "crb87_juniorsecschool_AsyncOperations": "System Jobs",
+      "crb87_juniorsecschool_BulkDeleteFailures": "Bulk Delete Failures",
+      "crb87_juniorsecschool_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "crb87_juniorsecschool_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "crb87_juniorsecschool_ProcessSession": "Process Sessions",
+      "crb87_juniorsecschool_SyncErrors": "Sync Errors",
+      "crb87_juniorsecschoolid": "Junior Sec School",
+      "crb87_student_JnrSubjectsTaken_crb87_juniorsecs": "Students",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Junior Sec Schools",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Junior Sec Schools (Views)",
+    "Name": "_crb87_juniorsecschool_views",
+    "RelatedEntityName": "Junior Sec Schools",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "376168f6-b459-43d1-a8d9-bdd2d6bd2ed2": "Junior Sec School Associated View",
+      "6a331f2e-4490-463b-ac64-530968c3cc83": "Junior Sec School Lookup View",
+      "861a43a9-a980-4ffb-a417-a2f99700156a": "Inactive Junior Sec Schools",
+      "931a43d7-c6a1-4e50-880f-d07708383853": "Active Junior Sec Schools",
+      "fc5c6be8-bb93-4e37-8b70-681abab30adc": "Junior Sec School Advanced Find View"
+    }
+  },
+  {
+    "DisplayName": "Status (Junior Sec Schools)",
+    "Name": "crb87_juniorsecschool_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Junior Sec Schools"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Junior Sec Schools",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Junior Sec Schools)",
+    "Name": "crb87_juniorsecschool_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Junior Sec Schools"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Junior Sec Schools",
+    "Type": "OptionSetInfo"
+  }
+]

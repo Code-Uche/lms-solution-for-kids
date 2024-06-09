@@ -1,0 +1,95 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "crb87_primaryschools",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "crb87_primaryschool",
+    "Name": "Primary Schools",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "crb87_allsubjects": "All Subjects",
+      "crb87_primaryschool_AsyncOperations": "System Jobs",
+      "crb87_primaryschool_BulkDeleteFailures": "Bulk Delete Failures",
+      "crb87_primaryschool_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "crb87_primaryschool_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "crb87_primaryschool_ProcessSession": "Process Sessions",
+      "crb87_primaryschool_SyncErrors": "Sync Errors",
+      "crb87_primaryschoolid": "Primary School",
+      "crb87_student_PrySubjectsTaken_crb87_primarysch": "Students",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Primary Schools",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Primary Schools (Views)",
+    "Name": "_crb87_primaryschool_views",
+    "RelatedEntityName": "Primary Schools",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "316ec7e0-2e01-410e-b2a0-c74d3e79d155": "Primary School Advanced Find View",
+      "42578933-1e42-44db-a572-5a4aca194f23": "Primary School Associated View",
+      "457ffff6-666a-4f86-96ad-a2ffd9dd0743": "Inactive Primary Schools",
+      "52ff9dc6-b633-4ce6-ba74-e2b3e2e0f86b": "Primary School Lookup View",
+      "ef2a2e30-8401-430d-91b6-d144aed55e5f": "Active Primary Schools"
+    }
+  },
+  {
+    "DisplayName": "Status (Primary Schools)",
+    "Name": "crb87_primaryschool_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Primary Schools"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Primary Schools",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Primary Schools)",
+    "Name": "crb87_primaryschool_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Primary Schools"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Primary Schools",
+    "Type": "OptionSetInfo"
+  }
+]

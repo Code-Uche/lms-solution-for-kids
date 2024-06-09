@@ -1,0 +1,98 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "crb87_seniorsecschsubjectses",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "crb87_seniorsecschsubjects",
+    "Name": "Senior Sec Sch Subjects",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "crb87_allsubjects": "All Subjects",
+      "crb87_artsdepartment": "Arts Department",
+      "crb87_commercialdepartment": "Commercial Department",
+      "crb87_sciencedepartment": "Science Department",
+      "crb87_seniorsecschsubjects_AsyncOperations": "System Jobs",
+      "crb87_seniorsecschsubjects_BulkDeleteFailures": "Bulk Delete Failures",
+      "crb87_seniorsecschsubjects_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "crb87_seniorsecschsubjects_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "crb87_seniorsecschsubjects_ProcessSession": "Process Sessions",
+      "crb87_seniorsecschsubjects_SyncErrors": "Sync Errors",
+      "crb87_seniorsecschsubjectsid": "Senior Sec Sch Subjects",
+      "crb87_student_SubjectsTaken_crb87_seniorsecschs": "Students",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Senior Sec Sch Subjects",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Senior Sec Sch Subjects (Views)",
+    "Name": "_crb87_seniorsecschsubjects_views",
+    "RelatedEntityName": "Senior Sec Sch Subjects",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "5e39b395-7478-4e86-b425-070a57f85fde": "Active Senior Sec Sch Subjects",
+      "862ccbb3-c6b4-4beb-8041-a8696b82d69a": "Inactive Senior Sec Sch Subjects",
+      "bc6f2ddb-74d7-4449-a71d-1dadb0486711": "Senior Sec Sch Subjects Lookup View",
+      "e25b3ae0-c4b7-4d83-b9dd-6e9058ba9d09": "Senior Sec Sch Subjects Advanced Find View",
+      "f5dfd97d-42ab-41f9-844c-fc47f1248273": "Senior Sec Sch Subjects Associated View"
+    }
+  },
+  {
+    "DisplayName": "Status (Senior Sec Sch Subjects)",
+    "Name": "crb87_seniorsecschsubjects_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Senior Sec Sch Subjects"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Senior Sec Sch Subjects",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Senior Sec Sch Subjects)",
+    "Name": "crb87_seniorsecschsubjects_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Senior Sec Sch Subjects"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Senior Sec Sch Subjects",
+    "Type": "OptionSetInfo"
+  }
+]

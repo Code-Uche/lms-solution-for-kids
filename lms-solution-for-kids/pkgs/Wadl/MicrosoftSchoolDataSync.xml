@@ -1,0 +1,204 @@
+<application xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:service="https://unitedstates-002.azure-apim.net/apim/microsoftschooldatasync" xmlns:siena="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11" siena:serviceId="MicrosoftSchoolDataSync" xmlns="http://wadl.dev.java.net/2009/02">
+  <doc title="Microsoft School Data Sync">Simplify class management in Office 365. School Data Sync reads rosters from your SIS and creates classes and groups for Microsoft Teams, Intune for Education, and third party applications.
+
+Connect to School Data Sync to upload school and roster information, manage your sync profile.</doc>
+  <grammars>
+    <jsonTypes targetNamespace="https://unitedstates-002.azure-apim.net/apim/microsoftschooldatasync" xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
+      <string name="GetUploadUrl_responses_200_def__ux40_odata_context_def" />
+      <string name="GetUploadUrl_responses_200_def_value_def" />
+      <object name="GetUploadUrl_responses_200_def">
+        <property name="@odata.context" type="string" />
+        <property name="value" type="string" />
+      </object>
+      <string name="GetSynchronizationprofiles_responses_200_def__ux40_odata_context_def" />
+      <string name="GetSynchronizationprofiles_responses_200_def_value_def_items_def_displayName_def" />
+      <string name="GetSynchronizationprofiles_responses_200_def_value_def_items_def_state_def" />
+      <boolean name="GetSynchronizationprofiles_responses_200_def_value_def_items_def_handleSpecialCharacterConstraint_def" />
+      <string name="GetSynchronizationprofiles_responses_200_def_value_def_items_def_termStartDate_def" />
+      <string name="GetSynchronizationprofiles_responses_200_def_value_def_items_def_termEndDate_def" />
+      <string name="GetSynchronizationprofiles_responses_200_def_value_def_items_def_dateFormat_def" />
+      <string name="GetSynchronizationprofiles_responses_200_def_value_def_items_def_id_def" />
+      <string name="GetSynchronizationprofiles_responses_200_def_value_def_items_def_dataProvider_def__ux40_odata_type_def" />
+      <string name="GetSynchronizationprofiles_responses_200_def_value_def_items_def_dataProvider_def_customizations_def_school_def_optionalPropertiesToSync_def_items_def" />
+      <array type="string" name="GetSynchronizationprofiles_responses_200_def_value_def_items_def_dataProvider_def_customizations_def_school_def_optionalPropertiesToSync_def" />
+      <dateTimeString name="GetSynchronizationprofiles_responses_200_def_value_def_items_def_dataProvider_def_customizations_def_school_def_synchronizationStartDate_def" />
+      <boolean name="GetSynchronizationprofiles_responses_200_def_value_def_items_def_dataProvider_def_customizations_def_school_def_isSyncDeferred_def" />
+      <boolean name="GetSynchronizationprofiles_responses_200_def_value_def_items_def_dataProvider_def_customizations_def_school_def_allowDisplayNameUpdate_def" />
+      <object name="GetSynchronizationprofiles_responses_200_def_value_def_items_def_dataProvider_def_customizations_def_school_def">
+        <property name="optionalPropertiesToSync" typeRef="GetSynchronizationprofiles_responses_200_def_value_def_items_def_dataProvider_def_customizations_def_school_def_optionalPropertiesToSync_def" />
+        <property name="synchronizationStartDate" typeRef="GetSynchronizationprofiles_responses_200_def_value_def_items_def_dataProvider_def_customizations_def_school_def_synchronizationStartDate_def" />
+        <property name="isSyncDeferred" type="boolean" />
+        <property name="allowDisplayNameUpdate" type="boolean" />
+      </object>
+      <string name="GetSynchronizationprofiles_responses_200_def_value_def_items_def_dataProvider_def_customizations_def_section_def_optionalPropertiesToSync_def_items_def" />
+      <array type="string" name="GetSynchronizationprofiles_responses_200_def_value_def_items_def_dataProvider_def_customizations_def_section_def_optionalPropertiesToSync_def" />
+      <dateTimeString name="GetSynchronizationprofiles_responses_200_def_value_def_items_def_dataProvider_def_customizations_def_section_def_synchronizationStartDate_def" />
+      <boolean name="GetSynchronizationprofiles_responses_200_def_value_def_items_def_dataProvider_def_customizations_def_section_def_isSyncDeferred_def" />
+      <boolean name="GetSynchronizationprofiles_responses_200_def_value_def_items_def_dataProvider_def_customizations_def_section_def_allowDisplayNameUpdate_def" />
+      <object name="GetSynchronizationprofiles_responses_200_def_value_def_items_def_dataProvider_def_customizations_def_section_def">
+        <property name="optionalPropertiesToSync" typeRef="GetSynchronizationprofiles_responses_200_def_value_def_items_def_dataProvider_def_customizations_def_section_def_optionalPropertiesToSync_def" />
+        <property name="synchronizationStartDate" typeRef="GetSynchronizationprofiles_responses_200_def_value_def_items_def_dataProvider_def_customizations_def_section_def_synchronizationStartDate_def" />
+        <property name="isSyncDeferred" type="boolean" />
+        <property name="allowDisplayNameUpdate" type="boolean" />
+      </object>
+      <string name="GetSynchronizationprofiles_responses_200_def_value_def_items_def_dataProvider_def_customizations_def_student_def_optionalPropertiesToSync_def_items_def" />
+      <array type="string" name="GetSynchronizationprofiles_responses_200_def_value_def_items_def_dataProvider_def_customizations_def_student_def_optionalPropertiesToSync_def" />
+      <dateTimeString name="GetSynchronizationprofiles_responses_200_def_value_def_items_def_dataProvider_def_customizations_def_student_def_synchronizationStartDate_def" />
+      <boolean name="GetSynchronizationprofiles_responses_200_def_value_def_items_def_dataProvider_def_customizations_def_student_def_isSyncDeferred_def" />
+      <boolean name="GetSynchronizationprofiles_responses_200_def_value_def_items_def_dataProvider_def_customizations_def_student_def_allowDisplayNameUpdate_def" />
+      <object name="GetSynchronizationprofiles_responses_200_def_value_def_items_def_dataProvider_def_customizations_def_student_def">
+        <property name="optionalPropertiesToSync" typeRef="GetSynchronizationprofiles_responses_200_def_value_def_items_def_dataProvider_def_customizations_def_student_def_optionalPropertiesToSync_def" />
+        <property name="synchronizationStartDate" typeRef="GetSynchronizationprofiles_responses_200_def_value_def_items_def_dataProvider_def_customizations_def_student_def_synchronizationStartDate_def" />
+        <property name="isSyncDeferred" type="boolean" />
+        <property name="allowDisplayNameUpdate" type="boolean" />
+      </object>
+      <string name="GetSynchronizationprofiles_responses_200_def_value_def_items_def_dataProvider_def_customizations_def_teacher_def_optionalPropertiesToSync_def_items_def" />
+      <array type="string" name="GetSynchronizationprofiles_responses_200_def_value_def_items_def_dataProvider_def_customizations_def_teacher_def_optionalPropertiesToSync_def" />
+      <dateTimeString name="GetSynchronizationprofiles_responses_200_def_value_def_items_def_dataProvider_def_customizations_def_teacher_def_synchronizationStartDate_def" />
+      <boolean name="GetSynchronizationprofiles_responses_200_def_value_def_items_def_dataProvider_def_customizations_def_teacher_def_isSyncDeferred_def" />
+      <boolean name="GetSynchronizationprofiles_responses_200_def_value_def_items_def_dataProvider_def_customizations_def_teacher_def_allowDisplayNameUpdate_def" />
+      <object name="GetSynchronizationprofiles_responses_200_def_value_def_items_def_dataProvider_def_customizations_def_teacher_def">
+        <property name="optionalPropertiesToSync" typeRef="GetSynchronizationprofiles_responses_200_def_value_def_items_def_dataProvider_def_customizations_def_teacher_def_optionalPropertiesToSync_def" />
+        <property name="synchronizationStartDate" typeRef="GetSynchronizationprofiles_responses_200_def_value_def_items_def_dataProvider_def_customizations_def_teacher_def_synchronizationStartDate_def" />
+        <property name="isSyncDeferred" type="boolean" />
+        <property name="allowDisplayNameUpdate" type="boolean" />
+      </object>
+      <string name="GetSynchronizationprofiles_responses_200_def_value_def_items_def_dataProvider_def_customizations_def_studentEnrollment_def_optionalPropertiesToSync_def_items_def" />
+      <array type="string" name="GetSynchronizationprofiles_responses_200_def_value_def_items_def_dataProvider_def_customizations_def_studentEnrollment_def_optionalPropertiesToSync_def" />
+      <dateTimeString name="GetSynchronizationprofiles_responses_200_def_value_def_items_def_dataProvider_def_customizations_def_studentEnrollment_def_synchronizationStartDate_def" />
+      <boolean name="GetSynchronizationprofiles_responses_200_def_value_def_items_def_dataProvider_def_customizations_def_studentEnrollment_def_isSyncDeferred_def" />
+      <boolean name="GetSynchronizationprofiles_responses_200_def_value_def_items_def_dataProvider_def_customizations_def_studentEnrollment_def_allowDisplayNameUpdate_def" />
+      <object name="GetSynchronizationprofiles_responses_200_def_value_def_items_def_dataProvider_def_customizations_def_studentEnrollment_def">
+        <property name="optionalPropertiesToSync" typeRef="GetSynchronizationprofiles_responses_200_def_value_def_items_def_dataProvider_def_customizations_def_studentEnrollment_def_optionalPropertiesToSync_def" />
+        <property name="synchronizationStartDate" typeRef="GetSynchronizationprofiles_responses_200_def_value_def_items_def_dataProvider_def_customizations_def_studentEnrollment_def_synchronizationStartDate_def" />
+        <property name="isSyncDeferred" type="boolean" />
+        <property name="allowDisplayNameUpdate" type="boolean" />
+      </object>
+      <string name="GetSynchronizationprofiles_responses_200_def_value_def_items_def_dataProvider_def_customizations_def_teacherRoster_def_optionalPropertiesToSync_def_items_def" />
+      <array type="string" name="GetSynchronizationprofiles_responses_200_def_value_def_items_def_dataProvider_def_customizations_def_teacherRoster_def_optionalPropertiesToSync_def" />
+      <dateTimeString name="GetSynchronizationprofiles_responses_200_def_value_def_items_def_dataProvider_def_customizations_def_teacherRoster_def_synchronizationStartDate_def" />
+      <boolean name="GetSynchronizationprofiles_responses_200_def_value_def_items_def_dataProvider_def_customizations_def_teacherRoster_def_isSyncDeferred_def" />
+      <boolean name="GetSynchronizationprofiles_responses_200_def_value_def_items_def_dataProvider_def_customizations_def_teacherRoster_def_allowDisplayNameUpdate_def" />
+      <object name="GetSynchronizationprofiles_responses_200_def_value_def_items_def_dataProvider_def_customizations_def_teacherRoster_def">
+        <property name="optionalPropertiesToSync" typeRef="GetSynchronizationprofiles_responses_200_def_value_def_items_def_dataProvider_def_customizations_def_teacherRoster_def_optionalPropertiesToSync_def" />
+        <property name="synchronizationStartDate" typeRef="GetSynchronizationprofiles_responses_200_def_value_def_items_def_dataProvider_def_customizations_def_teacherRoster_def_synchronizationStartDate_def" />
+        <property name="isSyncDeferred" type="boolean" />
+        <property name="allowDisplayNameUpdate" type="boolean" />
+      </object>
+      <object name="GetSynchronizationprofiles_responses_200_def_value_def_items_def_dataProvider_def_customizations_def">
+        <property name="school" typeRef="GetSynchronizationprofiles_responses_200_def_value_def_items_def_dataProvider_def_customizations_def_school_def" />
+        <property name="section" typeRef="GetSynchronizationprofiles_responses_200_def_value_def_items_def_dataProvider_def_customizations_def_section_def" />
+        <property name="student" typeRef="GetSynchronizationprofiles_responses_200_def_value_def_items_def_dataProvider_def_customizations_def_student_def" />
+        <property name="teacher" typeRef="GetSynchronizationprofiles_responses_200_def_value_def_items_def_dataProvider_def_customizations_def_teacher_def" />
+        <property name="studentEnrollment" typeRef="GetSynchronizationprofiles_responses_200_def_value_def_items_def_dataProvider_def_customizations_def_studentEnrollment_def" />
+        <property name="teacherRoster" typeRef="GetSynchronizationprofiles_responses_200_def_value_def_items_def_dataProvider_def_customizations_def_teacherRoster_def" />
+      </object>
+      <object name="GetSynchronizationprofiles_responses_200_def_value_def_items_def_dataProvider_def">
+        <property name="@odata.type" type="string" />
+        <property name="customizations" typeRef="GetSynchronizationprofiles_responses_200_def_value_def_items_def_dataProvider_def_customizations_def" />
+      </object>
+      <string name="GetSynchronizationprofiles_responses_200_def_value_def_items_def_identitySynchronizationConfiguration_def__ux40_odata_type_def" />
+      <string name="GetSynchronizationprofiles_responses_200_def_value_def_items_def_identitySynchronizationConfiguration_def_userDomains_def_items_def_appliesTo_def" />
+      <string name="GetSynchronizationprofiles_responses_200_def_value_def_items_def_identitySynchronizationConfiguration_def_userDomains_def_items_def_name_def" />
+      <object name="GetSynchronizationprofiles_responses_200_def_value_def_items_def_identitySynchronizationConfiguration_def_userDomains_def_items_def">
+        <property name="appliesTo" type="string" />
+        <property name="name" type="string" />
+      </object>
+      <array typeRef="GetSynchronizationprofiles_responses_200_def_value_def_items_def_identitySynchronizationConfiguration_def_userDomains_def_items_def" name="GetSynchronizationprofiles_responses_200_def_value_def_items_def_identitySynchronizationConfiguration_def_userDomains_def" />
+      <string name="GetSynchronizationprofiles_responses_200_def_value_def_items_def_identitySynchronizationConfiguration_def_matchingOptions_def_items_def_appliesTo_def" />
+      <string name="GetSynchronizationprofiles_responses_200_def_value_def_items_def_identitySynchronizationConfiguration_def_matchingOptions_def_items_def_sourcePropertyName_def" />
+      <string name="GetSynchronizationprofiles_responses_200_def_value_def_items_def_identitySynchronizationConfiguration_def_matchingOptions_def_items_def_targetPropertyName_def" />
+      <string name="GetSynchronizationprofiles_responses_200_def_value_def_items_def_identitySynchronizationConfiguration_def_matchingOptions_def_items_def_targetDomain_def" />
+      <object name="GetSynchronizationprofiles_responses_200_def_value_def_items_def_identitySynchronizationConfiguration_def_matchingOptions_def_items_def">
+        <property name="appliesTo" type="string" />
+        <property name="sourcePropertyName" type="string" />
+        <property name="targetPropertyName" type="string" />
+        <property name="targetDomain" type="string" />
+      </object>
+      <array typeRef="GetSynchronizationprofiles_responses_200_def_value_def_items_def_identitySynchronizationConfiguration_def_matchingOptions_def_items_def" name="GetSynchronizationprofiles_responses_200_def_value_def_items_def_identitySynchronizationConfiguration_def_matchingOptions_def" />
+      <object name="GetSynchronizationprofiles_responses_200_def_value_def_items_def_identitySynchronizationConfiguration_def">
+        <property name="@odata.type" type="string" />
+        <property name="userDomains" typeRef="GetSynchronizationprofiles_responses_200_def_value_def_items_def_identitySynchronizationConfiguration_def_userDomains_def" />
+        <property name="matchingOptions" typeRef="GetSynchronizationprofiles_responses_200_def_value_def_items_def_identitySynchronizationConfiguration_def_matchingOptions_def" />
+      </object>
+      <string name="GetSynchronizationprofiles_responses_200_def_value_def_items_def_licensesToAssign_def_items_def_appliesTo_def" />
+      <string name="GetSynchronizationprofiles_responses_200_def_value_def_items_def_licensesToAssign_def_items_def_skuIds_def_items_def" />
+      <array type="string" name="GetSynchronizationprofiles_responses_200_def_value_def_items_def_licensesToAssign_def_items_def_skuIds_def" />
+      <object name="GetSynchronizationprofiles_responses_200_def_value_def_items_def_licensesToAssign_def_items_def">
+        <property name="appliesTo" type="string" />
+        <property name="skuIds" typeRef="GetSynchronizationprofiles_responses_200_def_value_def_items_def_licensesToAssign_def_items_def_skuIds_def" />
+      </object>
+      <array typeRef="GetSynchronizationprofiles_responses_200_def_value_def_items_def_licensesToAssign_def_items_def" name="GetSynchronizationprofiles_responses_200_def_value_def_items_def_licensesToAssign_def" />
+      <object name="GetSynchronizationprofiles_responses_200_def_value_def_items_def">
+        <property name="displayName" type="string" />
+        <property name="state" type="string" />
+        <property name="handleSpecialCharacterConstraint" type="boolean" />
+        <property name="termStartDate" type="string" />
+        <property name="termEndDate" type="string" />
+        <property name="dateFormat" type="string" />
+        <property name="id" type="string" />
+        <property name="dataProvider" typeRef="GetSynchronizationprofiles_responses_200_def_value_def_items_def_dataProvider_def" />
+        <property name="identitySynchronizationConfiguration" typeRef="GetSynchronizationprofiles_responses_200_def_value_def_items_def_identitySynchronizationConfiguration_def" />
+        <property name="licensesToAssign" typeRef="GetSynchronizationprofiles_responses_200_def_value_def_items_def_licensesToAssign_def" />
+      </object>
+      <array typeRef="GetSynchronizationprofiles_responses_200_def_value_def_items_def" name="GetSynchronizationprofiles_responses_200_def_value_def" />
+      <object name="GetSynchronizationprofiles_responses_200_def">
+        <property name="@odata.context" type="string" />
+        <property name="value" typeRef="GetSynchronizationprofiles_responses_200_def_value_def" />
+      </object>
+      <string name="PostStartSync_responses_200_def__ux40_odata_context_def" />
+      <untypedObject name="PostStartSync_responses_200_def_value_def_items_def" />
+      <array typeRef="PostStartSync_responses_200_def_value_def_items_def" name="PostStartSync_responses_200_def_value_def" />
+      <object name="PostStartSync_responses_200_def">
+        <property name="@odata.context" type="string" />
+        <property name="value" typeRef="PostStartSync_responses_200_def_value_def" />
+      </object>
+    </jsonTypes>
+  </grammars>
+  <resources siena:authenticationProviderHref="#PowerAppAuth" base="https://unitedstates-002.azure-apim.net/apim/microsoftschooldatasync">
+    <resource path="/{connectionId}/synchronizationProfiles/{instanceId}/uploadUrl">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <param style="template" name="instanceId" type="xs:string" required="true">
+        <doc title="The instanceId of a profile is the GUID portion of the URL found on the Profile Details page" />
+      </param>
+      <method siena:requiresAuthentication="true" name="GET" id="GetUploadUrl" actionName="GetUploadUrl" siena:isDeprecated="false">
+        <doc title="Get Upload Url for CSV Profle&#xA;Gets the SAS Url for uploading csv files for a given profile" />
+        <request />
+        <response>
+          <representation mediaType="application/json" element="service:GetUploadUrl_responses_200_def" />
+        </response>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/synchronizationProfiles">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <method siena:requiresAuthentication="true" name="GET" id="GetSynchronizationprofiles" actionName="GetSynchronizationprofiles" siena:isDeprecated="false">
+        <doc title="Get Profiles&#xA;Get all the synchronization profiles in a tenant" />
+        <request />
+        <response>
+          <representation mediaType="application/json" element="service:GetSynchronizationprofiles_responses_200_def" />
+        </response>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/synchronizationProfiles/{instanceId}/start">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <param style="template" name="instanceId" type="xs:string" required="true">
+        <doc title="The instanceId of a profile is the GUID portion of the URL found on the Profile Details page" />
+      </param>
+      <method siena:requiresAuthentication="true" name="POST" id="PostStartSync" actionName="PostStartSync" siena:isDeprecated="false">
+        <doc title="Verify Uploaded Files and Start Sync&#xA;Triggers validation of uploaded files and starts sync if no errors are found." />
+        <request />
+        <response>
+          <representation mediaType="application/json" element="service:PostStartSync_responses_200_def" />
+        </response>
+      </method>
+    </resource>
+  </resources>
+  <authenticationProviders xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
+    <connectionProvider id="PowerAppAuth" siena:connectionProviderId="shared_microsoftschooldatasync" />
+  </authenticationProviders>
+  <template xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
+    <variable name="connectionId">
+      <modifyParams style="template" name="connectionId" attribute="fixed" />
+    </variable>
+  </template>
+</application>

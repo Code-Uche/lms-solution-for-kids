@@ -1,0 +1,32 @@
+{
+  "QualifiedValues": [
+    {
+      "Kind": "default.cds_crb87_student_forms",
+      "Namespace": "Students (Forms)",
+      "Values": {
+        "Information": "209559b6-e823-44be-9399-876a0c6c91a7"
+      }
+    },
+    {
+      "Kind": "default.cds_crb87_seniorsecschsubjects_forms",
+      "Namespace": "Senior Sec Sch Subjects (Forms)",
+      "Values": {
+        "Information": "be881892-5ae3-498d-89b7-a74da7bbc9c2"
+      }
+    },
+    {
+      "Kind": "default.cds_crb87_juniorsecschool_forms",
+      "Namespace": "Junior Sec Schools (Forms)",
+      "Values": {
+        "Information": "bd7ab990-5b6b-4f3a-9a1e-fc512f489df4"
+      }
+    },
+    {
+      "Kind": "default.cds_crb87_primaryschool_forms",
+      "Namespace": "Primary Schools (Forms)",
+      "Values": {
+        "Information": "4e40cbe8-dd12-4aea-ab7b-c23c563af546"
+      }
+    }
+  ]
+}

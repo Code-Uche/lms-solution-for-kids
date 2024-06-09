@@ -1,0 +1,131 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "crb87_students",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "crb87_student",
+    "Name": "Students",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "crb87_admissiondate": "Admission Date",
+      "crb87_age": "Age",
+      "crb87_enrollmentid": "Enrollment ID",
+      "crb87_fullnames": "Full Names",
+      "crb87_gender": "Gender",
+      "crb87_JnrSubjectsTaken": "Jnr Subjects Taken",
+      "crb87_name": "Name",
+      "crb87_parentsname": "Parent's Name",
+      "crb87_parentsphoneno": "Parent's Phone No.",
+      "crb87_phoneno": "Phone No.",
+      "crb87_PrySubjectsTaken": "Pry Subjects Taken",
+      "crb87_schoollibraryinventory_BookLendersName_cr": "LibraryInventories (crb87_schoollibraryinventory_BookLendersName_cr)",
+      "crb87_schoollibraryinventory_StudentEmail_crb87": "LibraryInventories (crb87_schoollibraryinventory_StudentEmail_crb87)",
+      "crb87_student_AsyncOperations": "System Jobs",
+      "crb87_student_BulkDeleteFailures": "Bulk Delete Failures",
+      "crb87_student_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "crb87_student_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "crb87_student_ProcessSession": "Process Sessions",
+      "crb87_student_SyncErrors": "Sync Errors",
+      "crb87_studentclass": "Student Class",
+      "crb87_studentemail": "Student Email",
+      "crb87_studentid": "Student",
+      "crb87_studentinformation100": "Student Information100",
+      "crb87_SubjectsTaken": "Subjects Taken",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Students",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Students (Views)",
+    "Name": "_crb87_student_views",
+    "RelatedEntityName": "Students",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "3aa08e9d-273c-4614-a901-f76a4f17cfa5": "Student Associated View",
+      "3f5d93d7-7cb4-40bd-901e-76e7689f68eb": "Inactive Students",
+      "49759ee9-2d26-49ff-a8f3-1e7ae1f059e1": "Student Advanced Find View",
+      "4dbcdbd4-4864-4363-aee7-44400daff179": "Active Students",
+      "a10c57a6-b847-4f5c-a8df-081b98d1cc01": "Student Lookup View"
+    }
+  },
+  {
+    "DisplayName": "Gender",
+    "Name": "crb87_gender",
+    "OptionSetInfoNameMapping": {
+      "561350000": "Male",
+      "561350001": "Female",
+      "561350002": "Other"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "crb87_gender",
+        "OptionSetReferenceEntityName": "Students"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "crb87_gender",
+    "RelatedEntityName": "Students",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status (Students)",
+    "Name": "crb87_student_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Students"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Students",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Students)",
+    "Name": "crb87_student_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Students"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Students",
+    "Type": "OptionSetInfo"
+  }
+]

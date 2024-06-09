@@ -1,0 +1,56 @@
+{
+  "0782ac2f-d43b-46fb-bac2-ec10adfb5389": {
+    "appActions": [],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Office 365 Outlook",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1677/1.0.1677.3637/office365/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "Office365Outlook"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "0782ac2f-d43b-46fb-bac2-ec10adfb5389"
+  },
+  "de1fd4c9-a4f9-448c-9d11-7ed776b76e96": {
+    "appActions": [],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Basecamp 3",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1652/1.0.1652.3394/basecamp/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_basecamp",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "Basecamp3"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "de1fd4c9-a4f9-448c-9d11-7ed776b76e96"
+  },
+  "fb65e442-39ea-41ee-8f3c-68dd690c0a2b": {
+    "appActions": [],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Microsoft School Data Sync",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/shgogna/globalperconnector-train1/1.0.1639.3312/microsoftschooldatasync/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_microsoftschooldatasync",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "MicrosoftSchoolDataSync"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "fb65e442-39ea-41ee-8f3c-68dd690c0a2b"
+  }
+}
